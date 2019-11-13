@@ -34,26 +34,28 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/tvpupuseria"
+                    android:id="@+id/tvCodigo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/pupuseria"
+                    android:text="@string/codigo_de_la_pupuseria"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorDarkGray"/>
 
+
                 <LinearLayout
                     android:layout_width="20dp"
                     android:layout_height="wrap_content"/>
 
+
                 <TextView
-                    android:id="@+id/etNombre"
+                    android:id="@+id/tvpupuseria"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/nombre"
+                    android:text="@string/pupuseria"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:textColor="@color/colorWhite"
@@ -78,17 +80,6 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content"/>
 
-                <TextView
-                    android:id="@+id/etnombredireccion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/nombredireccion"
-                    android:textSize="20sp"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorDarkGray"/>
-
                 <LinearLayout
                     android:layout_width="20dp"
                     android:layout_height="wrap_content"/>
@@ -104,20 +95,6 @@
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorDarkGray"/>
 
-                <LinearLayout
-                    android:layout_width="20dp"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/etnombretelefono"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/nombretelefono"
-                    android:textSize="20sp"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorDarkGray"/>
 
                 <LinearLayout
                     android:layout_width="20dp"
@@ -134,20 +111,6 @@
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorDarkGray"/>
 
-                <LinearLayout
-                    android:layout_width="20dp"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/etnombrecelular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/nombrecelular"
-                    android:textSize="20sp"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorDarkGray"/>
 
                 <LinearLayout
                     android:layout_width="20dp"
@@ -164,20 +127,6 @@
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorDarkGray"/>
 
-                <LinearLayout
-                    android:layout_width="20dp"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/etnombreemail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="NombreEmael"
-                    android:textSize="20sp"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorDarkGray"/>
             </LinearLayout>
 
             <LinearLayout

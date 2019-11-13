@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private TextView m;
     private EditText k;
-    private String name, id;
+    private String name, id, direcion, email, tel, cel;
 
 
     @Override
@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = this.getIntent();
         name = i.getStringExtra("n");
         id = i.getStringExtra("d");
+        direcion = i.getStringExtra("di");
+        email = i.getStringExtra("e");
+        tel = i.getStringExtra("t");
+        cel = i.getStringExtra("c");
         m.setText("Pupusería " + name );
     }
 
@@ -38,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
     public void perfil(View view) {
         Intent open = new Intent(MainActivity.this, PerfilActivity.class);
         open.putExtra("name", name);
+        open.putExtra("id", id);
+        open.putExtra("direccion", direcion);
+        open.putExtra("email", email);
+        open.putExtra("tel", tel);
+        open.putExtra("cel", cel);
         MainActivity.this.startActivity(open);
     }
 

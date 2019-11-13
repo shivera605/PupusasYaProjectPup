@@ -22,7 +22,7 @@ public class Login extends AppCompatActivity {
 
     private EditText usuario;
     private EditText clave;
-    private String user, pasw, url, resultado, n, d;
+    private String user, pasw, url, resultado, n, d, di, e, t, c;
     private boolean status = false;
 
     @Override
@@ -98,6 +98,11 @@ public class Login extends AppCompatActivity {
                         if (json.names().get(0).equals("exito")){
                             n = json.getString("Nombre");
                             d = json.getString("IdPupuseria");
+                            di = json.getString("Direccion");
+                            e = json.getString("Email");
+                            t = json.getString("Telefono");
+                            c = json.getString("Celular");
+
                             status = true;
                         }
                         else {
@@ -132,6 +137,10 @@ public class Login extends AppCompatActivity {
             Intent openMain = new Intent(Login.this, MainActivity.class);
             openMain.putExtra("n", n);
             openMain.putExtra("d", d);
+            openMain.putExtra("di", di);
+            openMain.putExtra("e", e);
+            openMain.putExtra("t", t);
+            openMain.putExtra("c", c);
             Login.this.startActivity(openMain);
             usuario.setText("");
             clave.setText("");

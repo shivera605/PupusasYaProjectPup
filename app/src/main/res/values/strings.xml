@@ -17,7 +17,7 @@
     <string name="etPhone">Teléfono (Opcional)</string>
     <string name="etPupuseriaName">Nombre Pupusería</string>
     <string name="agregar_produtos">agregar produtos</string>
-    <string name="perfil">perfil</string>
+    <string name="perfil">PERFIL</string>
     <string name="menu">Menu</string>
     <string name="nuevo_producto">NUEVO PRODUCTO</string>
     <string name="pupuseria">Pupuseria</string>
@@ -34,5 +34,7 @@
     <string name="nombrecelular">NombreCelular</string>
     <string name="email">Email</string>
     <string name="editar">Editar</string>
+    <string name="codigo">Codigo</string>
+    <string name="codigo_de_la_pupuseria">Codigo de la Pupuseria</string>
 
 </resources>
