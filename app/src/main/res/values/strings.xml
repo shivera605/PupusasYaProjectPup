@@ -36,5 +36,7 @@
     <string name="editar">Editar</string>
     <string name="codigo">Codigo</string>
     <string name="codigo_de_la_pupuseria">Codigo de la Pupuseria</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
+    <string name="editar_perfil">EDITAR PERFIL</string>
 
 </resources>
