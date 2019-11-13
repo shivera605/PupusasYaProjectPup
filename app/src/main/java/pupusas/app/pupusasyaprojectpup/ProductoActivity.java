@@ -109,11 +109,22 @@ public class ProductoActivity extends AppCompatActivity {
         return v;
     }
 
+    private int findProductType(String type){
+        int r = 0;
+
+        if (type.equals("Pupusas")) r = 1;
+        if (type.equals("Bebidas")) r = 2;
+        if (type.equals("Postres")) r = 3;
+        if (type.equals("Otros")) r = 4;
+
+        return r;
+    }
+
     private void initSignUp(){
         int idpupuseria = Integer.parseInt(id);
         String nombre = txtnombre.getText().toString();
         double precio = Double.parseDouble(txtprecio.getText().toString());
-        int tipo = spProducto.getSelectedItemPosition();
+        int tipo = findProductType(spProducto.getSelectedItem().toString());
 
             try {
                 AsyncHttpClient client = new AsyncHttpClient();
