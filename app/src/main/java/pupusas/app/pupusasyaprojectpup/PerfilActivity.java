@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class PerfilActivity extends AppCompatActivity {
     private TextView etid, etPupuseria, etDireccion, etemail, ettel, etcel;
+    private String name, id, direccion, email, tel, cel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +24,12 @@ public class PerfilActivity extends AppCompatActivity {
         etemail = findViewById(R.id.tvemail);
 
         Intent i = this.getIntent();
-        String id = i.getStringExtra("id");
-        String name = i.getStringExtra("name");
-        String direccion = i.getStringExtra("direccion");
-        String email = i.getStringExtra("email");
-        String tel = i.getStringExtra("tel");
-        String cel = i.getStringExtra("cel");
+        id = i.getStringExtra("id");
+        name = i.getStringExtra("name");
+        direccion = i.getStringExtra("direccion");
+        email = i.getStringExtra("email");
+        tel = i.getStringExtra("tel");
+        cel = i.getStringExtra("cel");
 
         etid.setText("Codigo de la Pupuseria: " + id );
         etPupuseria.setText("Pupusería " + name );
@@ -34,5 +37,16 @@ public class PerfilActivity extends AppCompatActivity {
         ettel.setText("Telefono: " + tel );
         etcel.setText("Celular: " + cel );
         etemail.setText("Email: " + email );
+    }
+
+    public void Editar(View view) {
+        Intent open = new Intent(PerfilActivity.this, PerfilEditarActivity.class);
+        open.putExtra("id", id);
+        open.putExtra("name", name);
+        open.putExtra("direccion", direccion);
+        open.putExtra("email", email);
+        open.putExtra("tel", tel);
+        open.putExtra("cel", cel);
+        PerfilActivity.this.startActivity(open);
     }
 }
