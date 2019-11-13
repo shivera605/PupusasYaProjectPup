@@ -11,7 +11,7 @@
 
        <TextView
            android:id="@+id/etProducto"
-           android:layout_width="129dp"
+           android:layout_width="201dp"
            android:layout_height="wrap_content"
            android:text="@string/nombreproducto"
            android:textColor="@color/colorWhite"
