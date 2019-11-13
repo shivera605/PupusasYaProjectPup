@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">PupusasYaProjectPup</string>
+    <string name="hintLoginUsu">Usuario</string>
+    <string name="hintLogContr">Contraseña</string>
+    <string name="etNames">Nombres</string>
+    <string name="etLastNames">Apellidos</string>
+    <string name="etEmail">Email (Opcional)</string>
+    <string name="etAddress">Dirección</string>
+    <string name="etPassword">Contraseña</string>
+    <string name="etConfPassword">Confirmar Contraseña</string>
+    <string name="btnSignUp">Registrarme</string>
+    <string name="etUserName">Nombre de Usuario</string>
+    <string name="tvSignUp">Registrarse</string>
+    <string name="tvSignIn">Iniciar Sesión</string>
+    <string name="etCellPhone">Celular</string>
+    <string name="userName">Nombre de Usuario</string>
+    <string name="etPhone">Teléfono (Opcional)</string>
+    <string name="etPupuseriaName">Nombre Pupusería</string>
+    <string name="agregar_produtos">agregar produtos</string>
+    <string name="perfil">perfil</string>
+    <string name="menu">Menu</string>
+    <string name="nuevo_producto">NUEVO PRODUCTO</string>
+    <string name="pupuseria">Pupuseria</string>
+    <string name="tipoproducto">tipoProducto</string>
+    <string name="nombreproducto">Nombre</string>
+    <string name="precio">Precio</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="direccion">Direccion</string>
+    <string name="nombre">Nombre</string>
+    <string name="nombredireccion">NombreDireccion</string>
+    <string name="telefono">Telefono</string>
+    <string name="nombretelefono">NombreTelefono</string>
+    <string name="celular">Celular</string>
+    <string name="nombrecelular">NombreCelular</string>
+    <string name="email">Email</string>
+    <string name="editar">Editar</string>
+
+</resources>
