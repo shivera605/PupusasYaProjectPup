@@ -24,7 +24,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class PerfilEditarActivity extends AppCompatActivity {
     private EditText etPupuseria, etDireccion, etemail, ettel, etcel;
-    private String resultado, name, id, direccion, email, tel, cel;
+    private String resultado, name, id, direccion, email, tel, cel, n, d, di, e, t, c;
     private boolean status = false;
 
     @Override
@@ -53,7 +53,7 @@ public class PerfilEditarActivity extends AppCompatActivity {
         etemail.setText(email );
     }
 
-    public void Save(View view) {
+    public void Save2(View view) {
         try {
             if(veryfyEt() == true ) initSignUp();
         } catch (Exception e) { mensaje("Ups... Parece que no tienes conexión a internet"); }
@@ -103,7 +103,7 @@ public class PerfilEditarActivity extends AppCompatActivity {
                             JSONObject json = new JSONObject(respuesta);
                             if (json.names().get(0).equals("exito")){
                                 resultado = json.getString("exito");
-                                //Toast.makeText(SignUp.this, resultado, Toast.LENGTH_LONG).show();
+
                                 status = true;
                             }
                             else {
@@ -126,9 +126,6 @@ public class PerfilEditarActivity extends AppCompatActivity {
 
             if (status == true){
                 mensaje("Cambios Guardados.");
-                Intent openLogin = new Intent(PerfilEditarActivity.this, PerfilActivity.class);
-                PerfilEditarActivity.this.startActivity(openLogin);
-                finish();
             }
         }
         catch (Exception e) {
@@ -159,5 +156,10 @@ public class PerfilEditarActivity extends AppCompatActivity {
 
         if (networkInfo != null && networkInfo.isConnected()) r = true;
         return r;
+    }
+
+    public void regresar(View view) {
+        Intent openLogin = new Intent(PerfilEditarActivity.this, MainActivity.class);
+        PerfilEditarActivity.this.startActivity(openLogin);
     }
 }

@@ -117,7 +117,17 @@
                     android:id="@+id/btnCambios"
                     android:background="@drawable/button_rounded"
                     android:layout_marginTop="20dp" android:layout_marginBottom="20dp"
-                    android:onClick="Save"
+                    android:onClick="Save2"
+                    android:textColor="@color/colorWhite"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_principal"
+                    android:id="@+id/btnMENU"
+                    android:background="@drawable/button_rounded"
+                    android:layout_marginTop="20dp" android:layout_marginBottom="20dp"
+                    android:onClick="regresar"
                     android:textColor="@color/colorWhite"/>
 
                 <LinearLayout
