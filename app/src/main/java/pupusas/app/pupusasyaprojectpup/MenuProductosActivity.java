@@ -11,6 +11,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -120,9 +121,9 @@ public class MenuProductosActivity extends AppCompatActivity {
         nombre.clear();
         precio.clear();
 
-        //final ProgressDialog progressDialog = new ProgressDialog(MenuProductosActivity.this);
-        //progressDialog.setMessage("Cargar Datos...");
-        //progressDialog.show();
+        final ProgressDialog progressDialog = new ProgressDialog(MenuProductosActivity.this);
+        progressDialog.setMessage("Cargar Datos...");
+        progressDialog.show();
         AsyncHttpClient client = new AsyncHttpClient();
         String url = "https://pupusasapp.000webhostapp.com/ProductsByName.php";
         RequestParams parametros = new RequestParams();
@@ -133,7 +134,7 @@ public class MenuProductosActivity extends AppCompatActivity {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode == 200) {
-                    //progressDialog.dismiss();
+                    progressDialog.dismiss();
                     try {
 
                         JSONArray jsonArray = new JSONArray(new String(responseBody));

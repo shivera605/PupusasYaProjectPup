@@ -39,5 +39,7 @@
     <string name="guardar_cambios">Guardar Cambios</string>
     <string name="editar_perfil">EDITAR PERFIL</string>
     <string name="menu_principal">Menu Principal</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="actualizar">Actualizar</string>
 
 </resources>
