@@ -73,7 +73,7 @@
             android:id="@+id/bncerrar"
             android:layout_width="148dp"
             android:layout_height="133dp"
-            android:onClick="Menu"
+            android:onClick="cerrarsesion"
             android:text="@string/cerrar_sesion"
             android:drawableTop="@drawable/ic_content_paste"
             >

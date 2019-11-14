@@ -80,9 +80,9 @@ public class MenuProductosActivity extends AppCompatActivity {
         nombre.clear();
         precio.clear();
 
-        final ProgressDialog progressDialog = new ProgressDialog(MenuProductosActivity.this);
-        progressDialog.setMessage("Cargar Datos...");
-        progressDialog.show();
+        //final ProgressDialog progressDialog = new ProgressDialog(MenuProductosActivity.this);
+        //progressDialog.setMessage("Cargar Datos...");
+        //progressDialog.show();
         AsyncHttpClient client = new AsyncHttpClient();
         String url = "https://pupusasapp.000webhostapp.com/verPoductos.php";
         RequestParams parametros = new RequestParams();
@@ -91,7 +91,7 @@ public class MenuProductosActivity extends AppCompatActivity {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode == 200) {
-                    progressDialog.dismiss();
+                    //progressDialog.dismiss();
                     try {
 
                         JSONArray jsonArray = new JSONArray(new String(responseBody));
