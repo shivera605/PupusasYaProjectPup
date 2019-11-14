@@ -69,6 +69,17 @@
 
         </Button>
 
+        <Button
+            android:id="@+id/bncerrar"
+            android:layout_width="148dp"
+            android:layout_height="133dp"
+            android:onClick="Menu"
+            android:text="@string/cerrar_sesion"
+            android:drawableTop="@drawable/ic_content_paste"
+            >
+
+        </Button>
+
     </LinearLayout>
 </LinearLayout>
 

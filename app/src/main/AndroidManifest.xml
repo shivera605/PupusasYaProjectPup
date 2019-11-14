@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".PerfilEditarActivity"></activity>
+        <activity android:name=".ProductoEditarActivity"></activity>
+        <activity android:name=".PerfilEditarActivity" />
         <activity android:name=".MenuProductosActivity" />
         <activity android:name=".PerfilActivity" />
         <activity android:name=".ProductoActivity" />
