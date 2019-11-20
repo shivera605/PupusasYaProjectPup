@@ -1,7 +1,9 @@
 package pupusas.app.pupusasyaprojectpup;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -10,8 +12,10 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 import org.json.JSONObject;
 import com.loopj.android.http.*;
@@ -23,12 +27,14 @@ public class SignUp extends AppCompatActivity {
     private EditText clave;
     private String user, pasw, url, resultado, n, a;
     private boolean status = false;
+    private ImageView imagen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        imagen = findViewById(R.id.foto);
         txtName = findViewById(R.id.etNames);
         txtEmail = findViewById(R.id.etEmail);
         txtPhone = findViewById(R.id.etPhone);
@@ -95,6 +101,7 @@ public class SignUp extends AppCompatActivity {
                 parametros.put("email", email);
                 parametros.put("usuario", userName);
                 parametros.put("contrasennia", password);
+                parametros.put("imagen", imagen);
 
                 client.post(url, parametros, new AsyncHttpResponseHandler() {
                     @Override
@@ -166,5 +173,24 @@ public class SignUp extends AppCompatActivity {
 
         if (networkInfo != null && networkInfo.isConnected()) r = true;
         return r;
+    }
+
+    public void imagen(View view) {
+      cargarimagen();
+    }
+
+    private void cargarimagen() {
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        intent.setType("imagen/");
+        startActivityForResult(intent.createChooser(intent,"Seleccionar Aplicacion"),10);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode==RESULT_OK){
+            Uri path = data.getData();
+            imagen.setImageURI(path);
+        }
     }
 }

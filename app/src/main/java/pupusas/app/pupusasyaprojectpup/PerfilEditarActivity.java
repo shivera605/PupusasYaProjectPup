@@ -24,7 +24,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class PerfilEditarActivity extends AppCompatActivity {
     private EditText etPupuseria, etDireccion, etemail, ettel, etcel;
-    private String resultado, name, id, direccion, email, tel, cel, n, d, di, e, t, c;
+    private String resultado, name, id, direccion, email, tel, cel;
     private boolean status = false;
 
     @Override

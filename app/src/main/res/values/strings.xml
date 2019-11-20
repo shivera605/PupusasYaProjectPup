@@ -41,5 +41,7 @@
     <string name="menu_principal">Menu Principal</string>
     <string name="cerrar_sesion">Cerrar Sesion</string>
     <string name="actualizar">Actualizar</string>
-
+    <string name="seleccionar_imagen">SELECCIONAR IMAGEN</string>
+    <string name="producto">Producto</string>
+    <string name="eliminar">ELIMINAR</string>
 </resources>

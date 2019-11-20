@@ -146,6 +146,8 @@ public class ProductoActivity extends AppCompatActivity {
                                     resultado = json.getString("exito");
                                     //Toast.makeText(SignUp.this, resultado, Toast.LENGTH_LONG).show();
                                     status = true;
+                                    txtnombre.setText("");
+                                    txtprecio.setText("");
                                 }
                                 else {
                                     resultado = "Acceso incorrecto";
