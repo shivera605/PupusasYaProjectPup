@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
-    android:background="@color/colorDarkBlue">
+    tools:context=".LoginCli"
+    android:background="@color/colorDarkGray">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,54 +19,49 @@
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@color/colorDarkGray">
+            android:background="@color/colorDarkBlue">
 
             <ImageView
                 android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/loginpic"/>
-
+                android:layout_height="60dp"
+                android:background="@drawable/vperfil2" />
         </LinearLayout>
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:orientation="vertical"
-            android:background="@color/colorDarkBlue"
-            android:layout_marginTop="20dp">
+            android:layout_height="608dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorDarkGray"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tvSignIn"
-                android:textSize="25sp"
+                android:layout_height="73dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:textColor="@color/colorWhite"/>
+                android:text="@string/tvSignIn"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
                 android:layout_marginTop="40dp"
-                >
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/vperfil2"/>
+                    android:background="@drawable/vperfil2" />
 
                 <EditText
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
                     android:id="@+id/etUsuario"
-                    android:hint="@string/hintLoginUsu"
+                    android:layout_width="280dp"
+                    android:layout_height="73dp"
                     android:gravity="center"
-                    android:inputType="text"
-                    android:textColor="@color/colorWhite"
-                    android:textColorHint="@color/colorWhite"/>
+                    android:hint="@string/hintLoginUsu"
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
@@ -77,23 +72,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/vkey"/>
+                    android:background="@drawable/vkey" />
 
                 <EditText
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
                     android:id="@+id/etPassword"
-                    android:hint="@string/hintLogContr"
+                    android:layout_width="280dp"
+                    android:layout_height="73dp"
                     android:gravity="center"
-                    android:inputType="textPassword"
-                    android:textColor="@color/colorWhite"
-                    android:textColorHint="@color/colorWhite"/>
+                    android:hint="@string/hintLogContr"
+                    android:inputType="textPassword" />
             </LinearLayout>
 
             <LinearLayout
@@ -104,29 +97,29 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_height="262dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/btnLogIn"
                     android:layout_width="280dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="73dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button_rounded"
                     android:onClick="LogIn"
-                    android:text="Log In"
+                    android:text="Entrar"
                     android:textColor="@color/colorWhite" />
 
                 <Button
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btnSignUp"
                     android:id="@+id/btnSignUp"
-                    android:onClick="SignUp"
-                    android:background="@drawable/button_rounded"
+                    android:layout_width="280dp"
+                    android:layout_height="73dp"
                     android:layout_marginTop="15dp"
-                    android:textColor="@color/colorWhite"/>
+                    android:background="@drawable/button_rounded"
+                    android:onClick="SignUp"
+                    android:text="@string/btnSignUp"
+                    android:textColor="@color/colorWhite" />
             </LinearLayout>
         </LinearLayout>
 

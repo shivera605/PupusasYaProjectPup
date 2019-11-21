@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ProductoEditarActivity"></activity>
+
+        <activity android:name=".ProductoEditarActivity" />
         <activity android:name=".PerfilEditarActivity" />
         <activity android:name=".MenuProductosActivity" />
         <activity android:name=".PerfilActivity" />
@@ -23,7 +24,7 @@
             android:configChanges="screenSize|orientation"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Login"
+            android:name=".activity_principal1"
             android:configChanges="screenSize|orientation"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
