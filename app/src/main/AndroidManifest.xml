@@ -37,6 +37,26 @@
             android:name=".MainActivity"
             android:configChanges="screenSize|orientation"
             android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".MainActivityCli"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".LoginCli"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".SignUpCli"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Login"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 </manifest>

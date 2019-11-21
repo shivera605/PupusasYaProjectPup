@@ -9,8 +9,6 @@
     <string name="etPassword">Contraseña</string>
     <string name="etConfPassword">Confirmar Contraseña</string>
     <string name="btnSignUp">Registrarme</string>
-    <string name="btnClientes">CLIENTES</string>
-    <string name="btnPupuseria">PUPUSERIAS</string>
     <string name="etUserName">Nombre de Usuario</string>
     <string name="tvSignUp">Registrarse</string>
     <string name="tvSignIn">Iniciar Sesión</string>
@@ -46,10 +44,4 @@
     <string name="seleccionar_imagen">SELECCIONAR IMAGEN</string>
     <string name="producto">Producto</string>
     <string name="eliminar">ELIMINAR</string>
-    <string name="btnClientes1">CLIENTES</string>
-    <string name="tv1">CLIENTES</string>
-    <string name="App_name">Intent</string>
-    <string name="btnPupuserias1">PUPUSERIAS</string>
-    <string name="tv2">PUPUSERIAS</string>
-
 </resources>

@@ -27,6 +27,7 @@ public class LoginCli extends AppCompatActivity {
     private EditText clave;
     private String user, pasw, url, resultado, n, d, di, e, t, c, a;
     private boolean status = false;
+    private String nameCust, lastNameCust, addressCust, phoneCust, emailCust, idCust;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class LoginCli extends AppCompatActivity {
         clave = findViewById(R.id.etPassword);
     }
 
-    public void LogIn(View view) {
+    public void LogInCli(View view) {
 
         if (usuario.getText().toString().isEmpty()){
             mError("No ha introducido el nombre de usuario.");
@@ -52,8 +53,8 @@ public class LoginCli extends AppCompatActivity {
         }
     }
 
-    public void SignUp(View view) {
-        Intent open = new Intent(LoginCli.this, SignUp.class);
+    public void SignUpCli(View view) {
+        Intent open = new Intent(LoginCli.this, SignUpCli.class);
         LoginCli.this.startActivity(open);
     }
 
@@ -85,7 +86,7 @@ public class LoginCli extends AppCompatActivity {
         user = usuario.getText().toString();
         pasw = clave.getText().toString();
         AsyncHttpClient client = new AsyncHttpClient();
-        url = "https://pupusasapp.000webhostapp.com/PupLogin2.php";
+        url = "https://pupusasapp.000webhostapp.com/LogIn.php";
         RequestParams parametros = new RequestParams();
         parametros.put("usu", user);
         parametros.put("pas", pasw);
@@ -98,12 +99,12 @@ public class LoginCli extends AppCompatActivity {
 
                         JSONObject json = new JSONObject(respuesta);
                         if (json.names().get(0).equals("exito")){
-                            n = json.getString("Nombre");
-                            d = json.getString("IdCliente");
-                            di = json.getString("Direccion");
-                            e = json.getString("Email");
-                            t = json.getString("Usuario");
-                            c = json.getString("Celular");
+                            nameCust = json.getString("Nombre");
+                            lastNameCust = json.getString("Apellido");
+                            addressCust = json.getString("Direccion");
+                            phoneCust = json.getString("Celular");
+                            emailCust = json.getString("Email");
+                            idCust = json.getString("IdCliente");
                             status = true;
                         }
                         else {
@@ -135,12 +136,17 @@ public class LoginCli extends AppCompatActivity {
         });
 
         if (status == true){
-            Intent openMain = new Intent(LoginCli.this, MainActivity.class);
-            openMain.putExtra("n", n);
-            openMain.putExtra("a", a);
+            Intent openMain = new Intent(LoginCli.this, MainActivityCli.class);
+            openMain.putExtra("Nombre", nameCust);
+            openMain.putExtra("Apellido", lastNameCust);
+            openMain.putExtra("Direccion", addressCust);
+            openMain.putExtra("Telefono", phoneCust);
+            openMain.putExtra("Email", emailCust);
+            openMain.putExtra("IdCliente", idCust);
             LoginCli.this.startActivity(openMain);
             usuario.setText("");
             clave.setText("");
+            finish();
         }
     }
 }

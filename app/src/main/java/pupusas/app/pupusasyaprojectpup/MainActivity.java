@@ -59,5 +59,6 @@ public class MainActivity extends AppCompatActivity {
     public void cerrarsesion(View view) {
         Intent open = new Intent(MainActivity.this, Login.class);
         MainActivity.this.startActivity(open);
+        finish();
     }
 }
