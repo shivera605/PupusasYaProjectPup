@@ -60,6 +60,7 @@ public class MainActivityCli extends AppCompatActivity {
 
     public void cerrarsesion(View view) {
         Intent open = new Intent(MainActivityCli.this, LoginCli.class);
+        open.putExtra("Nombre", nameCust);
         MainActivityCli.this.startActivity(open);
         finish();
     }

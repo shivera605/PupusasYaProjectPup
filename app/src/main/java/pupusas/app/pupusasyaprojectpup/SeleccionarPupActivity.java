@@ -33,7 +33,7 @@ public class SeleccionarPupActivity extends AppCompatActivity  {
     private ListView lista;
     private ArrayList nombre, precio, idproduto;
     private TextView m;
-    private EditText txtSearch;
+    private EditText txtBuscarPup;
     private String id, resultado;
     private boolean status = false;
     private  Intent intent;
@@ -43,22 +43,22 @@ public class SeleccionarPupActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_pup);
 
-        m = findViewById(R.id.tvMessage1);
+        //m = findViewById(R.id.tvMessage1);
 
-        Intent i = this.getIntent();
+        /*Intent i = this.getIntent();
         String name = i.getStringExtra("name");
         id = i.getStringExtra("id");
-        m.setText("Menu Pupusería " + name);
+        m.setText("Menu Pupusería " + name);*/
 
         lista = (ListView) findViewById(R.id.listaPupuserias);
-        txtSearch = findViewById(R.id.etSearchPupuseria);
+        txtBuscarPup = findViewById(R.id.etBuscarPup);
         nombre = new ArrayList();
-        precio = new ArrayList();
+        //precio = new ArrayList();
         idproduto = new ArrayList();
 
-        descargardatos();
+        downloadData();
 
-        txtSearch.addTextChangedListener(new TextWatcher() {
+        txtBuscarPup.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -66,8 +66,8 @@ public class SeleccionarPupActivity extends AppCompatActivity  {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                String name = txtSearch.getText().toString();
-                SearchByName(name);
+                //String name = txtBuscarPup.getText().toString();
+               // SearchPup(name);
             }
 
             @Override
@@ -77,10 +77,9 @@ public class SeleccionarPupActivity extends AppCompatActivity  {
         });
     }
 
-    private void descargardatos() {
-        int idpupuseria = Integer.parseInt(id);
+    private void downloadData() {
+        //int idpupuseria = Integer.parseInt(id);
         nombre.clear();
-        precio.clear();
         idproduto.clear();
 
         //final ProgressDialog progressDialog = new ProgressDialog(MenuProductosActivity.this);
@@ -112,13 +111,13 @@ public class SeleccionarPupActivity extends AppCompatActivity  {
                         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                                intent = new Intent(view.getContext(),ProductoEditarActivity.class);
+                                /*intent = new Intent(view.getContext(),ProductoEditarActivity.class);
                                 intent.putExtra("nombre", String.valueOf(nombre.get(position)));
-                                intent.putExtra("precio", String.valueOf(precio.get(position)));
-                                intent.putExtra("id", String.valueOf(idproduto.get(position)));
+                                //intent.putExtra("precio", String.valueOf(precio.get(position)));
+                                intent.putExtra("id", String.valueOf(idproduto.get(position)));*/
 
 
-                                startActivity(intent);
+                                //startActivity(intent);
                             }
                         });
 
@@ -135,7 +134,7 @@ public class SeleccionarPupActivity extends AppCompatActivity  {
         });
     }
 
-    private void SearchByName(String name) {
+    private void SearchPup(String name) {
         int idPupuseria = Integer.parseInt(id);
         nombre.clear();
         precio.clear();

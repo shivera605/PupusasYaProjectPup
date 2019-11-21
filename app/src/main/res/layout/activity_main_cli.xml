@@ -32,7 +32,7 @@
         >
 
         <Button
-            android:id="@+id/bnLigarse"
+            android:id="@+id/btnLigarse"
             android:layout_width="149dp"
             android:layout_height="133dp"
             android:drawableTop="@drawable/ic_add_circle"
