@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PupusasYaProjectPup</string>
+    <string name="app_name">PupusasYa!</string>
     <string name="hintLoginUsu">Usuario</string>
     <string name="hintLogContr">Contraseña</string>
     <string name="etNames">Nombres</string>
@@ -44,4 +44,7 @@
     <string name="seleccionar_imagen">SELECCIONAR IMAGEN</string>
     <string name="producto">Producto</string>
     <string name="eliminar">ELIMINAR</string>
+    <string name="nombrePupuseria">Pupuseria</string>
+    <string name="codigoPup">Codigo Pupuseria</string>
+    <string name="btnTextAdd">Agregar</string>
 </resources>

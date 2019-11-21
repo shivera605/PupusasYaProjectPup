@@ -32,12 +32,12 @@
         >
 
         <Button
-            android:id="@+id/bnproduto"
+            android:id="@+id/bnLigarse"
             android:layout_width="149dp"
             android:layout_height="133dp"
             android:drawableTop="@drawable/ic_add_circle"
             android:text="Ligarse a Pupuseria"
-            android:onClick="producto"
+            android:onClick="ligarse"
             >
 
         </Button>

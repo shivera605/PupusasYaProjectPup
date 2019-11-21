@@ -57,6 +57,12 @@
             android:name=".Login"
             android:configChanges="screenSize|orientation"
             android:windowSoftInputMode="stateHidden" />
-    </application>
+
+
+    <activity
+        android:name=".SeleccionarPupActivity"
+        android:configChanges="screenSize|orientation"
+        android:windowSoftInputMode="stateHidden" />
+</application>
 
 </manifest>

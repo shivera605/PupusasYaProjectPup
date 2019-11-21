@@ -63,4 +63,9 @@ public class MainActivityCli extends AppCompatActivity {
         MainActivityCli.this.startActivity(open);
         finish();
     }
+
+    public void ligarse(View view) {
+        Intent open = new Intent(MainActivityCli.this, SeleccionarPupActivity.class);
+        MainActivityCli.this.startActivity(open);
+    }
 }
